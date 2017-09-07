@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>TO DO APP</title>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="style.css"> 
+  </head>
+  <body>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6">
+          <div class="panel panel-default add-todo-panel">
+            <div class="panel-heading"><h1>Add a task</h1></div>
+            <div class="panel-body">
+              <div class="row">
+                <div class="col-md-10">
+                  <div class="form-group">
+                    <label for="task">Task:</label>
+                    <input type="text" class="form-control" id="task">
+                    <label for="Urgency">Urgency: </label>
+                    <label class="radio-inline"><input type="radio" name="urgency" id="important">important</label>
+                    <label class="radio-inline"><input type="radio" name="urgency" id="urgent">urgent</label>
+                    <label class="radio-inline"><input type="radio" name="urgency" id="canwait">can wait</label>
+                    <button type="submit" class="btn btn-block btn-success" id="add-btn" onClick='addTask();'>Add</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6"> 
+          <div class="panel panel-default">
+            <div class="panel-heading">
+              <h1>Your To Do list:</h1></div>
+            <div class="panel-group">
+              <div class="panel panel-default filters-panel">
+                <div class="panel-body">
+                  <button type="submit" class="btn btn-primary" id="filter-all-btn">All</button>
+                  <button type="submit" class="btn btn-success" id="filter-completed-btn">Ready</button>
+                  <button type="submit" class="btn btn-default" id="filter-not-completed-btn">Not ready</button>
+                  <button type="submit" class="btn btn-danger" id="filter-important-btn">Important</button>
+                  <button type="submit" class="btn btn-warning" id="filter-not-urgent-btn">Urgent</button>
+                  <button type="submit" class="btn btn-info" id="filter-not-canwait-btn">Can wait</button>
+                </div>
+              </div>
+              <div class="panel panel-default todo-panel">
+                <!-- Todos list -->
+                <div id="todo-list-root">
+                  <!-- Lista będzie renderowana tutaj -->
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="app/script.js"></script>
+    <script src="app/task.js"></script>
+    <script src="app/js.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  </body>
+</html>
