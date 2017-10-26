@@ -16,12 +16,9 @@ let newTaskTyping = new Task();
 
 function addTask() {
   newTaskTyping.description = document.querySelector('#task').value;
+  
   newTaskTyping.state = document.querySelector('input[name="urgency"]:checked').value;
 
-  var im = `alert alert-danger`;
-  var ur = `alert alert-warning`;
-  var cw = `alert alert-info`;
-  
   var html = (newTaskTyping.state == 'im' ? (`<div class="panel panel-default todo-item">
 <div class="panel-body alert alert-danger">
 <div class="row">
