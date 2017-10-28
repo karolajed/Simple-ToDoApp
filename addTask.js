@@ -42,7 +42,7 @@ ${tasks[uid].description}
 </div>
 </div>
 <div class="col-sm-2">
-<button type="submit" class="btn btn-block btn-danger" id="delete` + tasks[uid].id +`">
+<button type="submit" class="btn btn-block btn-danger" id="delete` + tasks[uid].id +`" onclick="deleteTask()">
 Delete
 </button>
 </div>
@@ -54,8 +54,6 @@ Delete
     todoPanel.innerHTML += task;
 
     buttons[tasks[uid].id] = document.querySelector("#delete" + tasks[uid].id);
-
-    buttons[tasks[uid].id].addEventListener("click", function() {deleteTask()});
   }
 }
 
