@@ -10,7 +10,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
     <!-- Latest compiled JavaScript -->
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script> 
     <link rel="stylesheet" href="style.css"> 
   </head>
   <body>
@@ -24,6 +24,7 @@
                 <div class="col-md-10">
                   <div class="form-group">
                     <label for="task">Task:</label>
+                    <div id="form"></div>
                     <input type="text" class="form-control" id="task">
                     <label for="Urgency">Urgency: </label>
                     <label class="radio-inline"><input type="radio" name="urgency" id="important" value="im">important</label>
@@ -94,7 +95,11 @@
       </div>
     </div>
 
-    <script src="addTask.js"></script>
+    <script>
+      var buttons = [];
+    </script>
+    <script type='text/javascript' src="addTask.js"></script>
+    <script type='text/javascript' src="script.js"></script>
     <!--   <script src="app/script.js"></script>
 <script src="app/task.js"></script>
 <script src="app/js.js"></script>-->
