@@ -26,7 +26,7 @@ function addTask() {
 
     var alert = (tasks[uid].state == 'im' ? "alert-danger" : (tasks[uid].state == 'ur' ? "alert-warning" : "alert-info"));
 
-    var task = `<div class="panel panel-default todo-item">
+    var task = `<div class="panel panel-default todo-item" id="todo-` + tasks[uid].id + `">
 <div class="panel-body alert ` + alert + `">
 <div class="row">
 <div class="col-sm-8">
@@ -42,7 +42,7 @@ ${tasks[uid].description}
 </div>
 </div>
 <div class="col-sm-2">
-<button type="submit" class="btn btn-block btn-danger" id="delete` + tasks[uid].id +`" onclick="deleteTask()">
+<button type="submit" class="btn btn-block btn-danger" id="delete` + tasks[uid].id +`" onclick="deleteTask('todo-` + tasks[uid].id + `')">
 Delete
 </button>
 </div>
